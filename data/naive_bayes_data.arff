@@ -1,0 +1,29 @@
+@RELATION NBData
+@attribute g numeric
+@attribute h numeric
+@attribute n numeric
+@attribute s numeric
+@attribute t numeric
+@attribute y numeric
+@attribute a numeric
+@attribute b numeric
+@attribute c numeric
+@attribute d numeric
+@attribute e numeric
+@attribute class {M,S,G}
+@DATA
+0,0,1,0,1,0,0,0,0,0,0,M
+0,0,1,1,0,0,0,0,0,0,0,M
+1,0,0,1,0,0,0,0,0,0,0,M
+0,1,0,1,0,0,0,0,0,0,0,M
+0,0,1,0,0,1,0,0,0,0,0,M
+1,0,0,0,0,1,0,0,0,0,0,S
+1,0,0,1,0,0,0,0,0,0,0,S
+1,0,0,0,1,0,0,0,0,0,0,S
+0,1,0,0,0,1,0,0,0,0,0,S
+0,0,1,0,1,0,0,0,0,0,0,S
+0,0,0,0,0,0,1,0,0,0,0,G
+0,0,0,0,0,0,0,1,0,0,0,G
+0,0,0,0,0,0,0,0,1,0,0,G
+0,0,0,0,0,0,0,0,0,1,0,G
+0,0,0,0,0,0,0,0,0,0,1,G

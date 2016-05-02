@@ -1,0 +1,9 @@
+gold medal	gold
+gold	gold
+silver medal	silver
+silver	silver
+bronze medal	bronze
+bronze	bronze
+first place	gold
+second place	silver
+third place	bronze

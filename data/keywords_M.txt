@@ -1,0 +1,33 @@
+movie
+film
+photographic
+photography
+films
+box
+produce
+director
+actor
+actors
+actress
+hollywood
+soundtrack
+track
+box office
+act
+oscar
+starring
+supporting role
+protagonist
+leading role
+role
+runtime
+genre
+earnings rank
+rating
+best picture
+supporting
+leading
+type
+birth
+birthday
+award

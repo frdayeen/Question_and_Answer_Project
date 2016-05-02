@@ -1,0 +1,13 @@
+african	africa
+africa	africa
+antarctica	antarctica
+asian	asia
+asia	asia
+australian	australia
+australia	australia
+european	europe
+europe	europe
+north american	north america
+north america	north america
+south american	south america
+south america	south america

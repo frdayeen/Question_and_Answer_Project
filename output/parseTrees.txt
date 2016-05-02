@@ -1,0 +1,234 @@
+Question (1c): Is the Pacific deeper than than the Atlantic?
+(ROOT
+  (SQ (VBZ Is)
+    (NP (DT the) (NNP Pacific))
+    (ADJP (JJR deeper)
+      (PP (IN than)
+        (PP (IN than)
+          (NP (DT the) (NNP Atlantic)))))
+    (. ?)))
+
+cop(deeper-4, Is-1)
+det(Pacific-3, the-2)
+nsubj(deeper-4, Pacific-3)
+root(ROOT-0, deeper-4)
+prep(deeper-4, than-5)
+pcomp(than-5, than-6)
+det(Atlantic-8, the-7)
+prep_than(than-5, Atlantic-8)
+
+
+
+Question (1e): Did Sweden beat Finland in hockey?
+(ROOT
+  (SQ (VBD Did)
+    (NP (NNP Sweden))
+    (VP (VB beat)
+      (NP
+        (NP (NNP Finland))
+        (PP (IN in)
+          (NP (NN hockey)))))
+    (. ?)))
+
+aux(beat-3, Did-1)
+nsubj(beat-3, Sweden-2)
+root(ROOT-0, beat-3)
+dobj(beat-3, Finland-4)
+prep_in(Finland-4, hockey-6)
+
+
+
+Question (1f): Did a woman from Korea win the gold medal in figure skating?
+(ROOT
+  (SQ (VBD Did)
+    (NP
+      (NP (DT a) (NN woman))
+      (PP (IN from)
+        (NP (NNP Korea))))
+    (VP (VB win)
+      (NP (DT the) (JJ gold) (NN medal))
+      (PP (IN in)
+        (NP (NN figure) (NN skating))))
+    (. ?)))
+
+aux(win-6, Did-1)
+det(woman-3, a-2)
+nsubj(win-6, woman-3)
+prep_from(woman-3, Korea-5)
+root(ROOT-0, win-6)
+det(medal-9, the-7)
+amod(medal-9, gold-8)
+dobj(win-6, medal-9)
+nn(skating-12, figure-11)
+prep_in(win-6, skating-12)
+
+
+
+Question (1j): Did a French actor win the oscar in 2012?
+(ROOT
+  (SQ (VBD Did)
+    (NP (DT a) (JJ French) (NN actor))
+    (VP (VB win)
+      (NP
+        (NP (DT the) (NN oscar))
+        (PP (IN in)
+          (NP (CD 2012)))))
+    (. ?)))
+
+aux(win-5, Did-1)
+det(actor-4, a-2)
+amod(actor-4, French-3)
+nsubj(win-5, actor-4)
+root(ROOT-0, win-5)
+det(oscar-7, the-6)
+dobj(win-5, oscar-7)
+prep_in(oscar-7, 2012-9)
+
+
+
+Question (2a): Who directed Hugo?
+(ROOT
+  (SBARQ
+    (WHNP (WP Who))
+    (SQ
+      (VP (VBD directed)
+        (NP (NNP Hugo))))
+    (. ?)))
+
+nsubj(directed-2, Who-1)
+root(ROOT-0, directed-2)
+dobj(directed-2, Hugo-3)
+
+
+
+Question (2b): Which is the scary movie by Kubrik with Nicholson?
+(ROOT
+  (SBARQ
+    (WHNP (WP Which))
+    (SQ (VBZ is)
+      (NP
+        (NP (DT the) (JJ scary) (NN movie))
+        (PP (IN by)
+          (NP
+            (NP (NNP Kubrik))
+            (PP (IN with)
+              (NP (NNP Nicholson)))))))
+    (. ?)))
+
+attr(is-2, Which-1)
+root(ROOT-0, is-2)
+det(movie-5, the-3)
+amod(movie-5, scary-4)
+nsubj(is-2, movie-5)
+prep_by(movie-5, Kubrik-7)
+prep_with(Kubrik-7, Nicholson-9)
+
+
+
+Question (2f): In which continent does Canada lie?
+(ROOT
+  (SBARQ
+    (WHPP (IN In)
+      (WHNP (WDT which) (NN continent)))
+    (SQ (VBZ does)
+      (NP (NNP Canada))
+      (VP (VB lie)))
+    (. ?)))
+
+det(continent-3, which-2)
+prep_in(lie-6, continent-3)
+aux(lie-6, does-4)
+nsubj(lie-6, Canada-5)
+root(ROOT-0, lie-6)
+
+
+
+Question (2h): With which countries does Italy have a border?
+(ROOT
+  (S
+    (PP (IN With)
+      (SBAR
+        (WHNP (WDT which))
+        (S
+          (NP (NNS countries))
+          (VP (VBZ does)))))
+    (NP (NNP Italy))
+    (VP (VBP have)
+      (NP (DT a) (NN border)))
+    (. ?)))
+
+dep(have-6, With-1)
+dobj(does-4, which-2)
+nsubj(does-4, countries-3)
+pcomp(With-1, does-4)
+nsubj(have-6, Italy-5)
+root(ROOT-0, have-6)
+det(border-8, a-7)
+dobj(have-6, border-8)
+
+
+
+Question (2m): Which woman won two silver medals in alpine skiing?
+(ROOT
+  (SBARQ
+    (WHNP (WDT Which) (NN woman))
+    (SQ
+      (VP (VBD won)
+        (NP (CD two) (JJ silver) (NNS medals))
+        (PP (IN in)
+          (NP (JJ alpine) (NN skiing)))))
+    (. ?)))
+
+det(woman-2, Which-1)
+nsubj(won-3, woman-2)
+root(ROOT-0, won-3)
+num(medals-6, two-4)
+amod(medals-6, silver-5)
+dobj(won-3, medals-6)
+amod(skiing-9, alpine-8)
+prep_in(won-3, skiing-9)
+
+
+
+Question (2n): In which race did Ohno win silver?
+(ROOT
+  (SBARQ
+    (WHPP (IN In)
+      (WHNP (WDT which) (NN race)))
+    (SQ (VBD did)
+      (NP (NNP Ohno))
+      (VP (VB win)
+        (NP (NN silver))))
+    (. ?)))
+
+det(race-3, which-2)
+prep_in(win-6, race-3)
+aux(win-6, did-4)
+nsubj(win-6, Ohno-5)
+root(ROOT-0, win-6)
+dobj(win-6, silver-7)
+
+
+
+Question (2o): In which sport did Canada win two gold medals?
+(ROOT
+  (SBARQ
+    (WHPP (IN In)
+      (WHNP (WDT which) (NN sport)))
+    (SQ (VBD did)
+      (NP (NNP Canada))
+      (VP (VB win)
+        (NP (CD two) (JJ gold) (NNS medals))))
+    (. ?)))
+
+det(sport-3, which-2)
+prep_in(win-6, sport-3)
+aux(win-6, did-4)
+nsubj(win-6, Canada-5)
+root(ROOT-0, win-6)
+num(medals-9, two-7)
+amod(medals-9, gold-8)
+dobj(win-6, medals-9)
+
+
+

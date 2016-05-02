@@ -1,0 +1,119 @@
+Which continent is France in?
+G
+
+What's the area of Africa?
+G
+
+What's the population of Asia?
+G
+
+Which continent has the highest sea level?
+G
+
+Which continent has the lowest altitude?
+G
+
+What's the capital of Italy?
+G
+
+Which country has more than one capital?
+G
+
+With which countries does Canada have a border?
+G
+
+Which mountain is the highest?
+G
+
+What's the height of Mount Everest?
+G
+
+Which ocean is the deepest?
+G
+
+What is the most depth of Arctic Ocean?
+G
+
+How deep is the deepest place of Arctic Ocean?
+G
+
+What's the nationality of Svendsen?
+S
+
+Which country does Lee come from?
+S
+
+Is Miller male or female?
+S
+
+Which country has the most athletes?
+S
+
+How many competitions are there in the Winter Olympics?
+S
+
+Who won the ski jumping in Winter Olympics 2010?
+S
+
+Which athlete won the most medals in Winter Olympics 2010?
+S
+
+When was Bette Davis born?
+M
+
+What is the birth date of James Dean?
+M
+
+What is the date of birth of James Dean?
+M
+
+Where was Gary Cooper born?
+M
+
+What is the place of birth of Gary Cooper?
+M
+
+What is the birth place of Gary Cooper?
+M
+
+Who is the youngest movie worker?
+M
+
+When was Avatar released?
+M
+
+What's the genre, rating and runtime for Star Wars?
+M
+
+What types of awards does oscar have?
+M
+
+Who directs Avatar?
+M
+
+Who is the director of Avatar?
+M
+
+Who are the actors of Avatar?
+M
+
+Who are the actresses of Avatar?
+M
+
+Who are the actors and actresses in Titanic?
+M
+
+Who won the best actor in 2010?
+M
+
+Who won the best supporting actress in 2010?
+M
+
+Which movie won the best picture in 2009?
+M
+
+In which movie did Jeff Bridges won the best actor in 2010?
+M
+
+Who won the most academy awards in oscar?
+M

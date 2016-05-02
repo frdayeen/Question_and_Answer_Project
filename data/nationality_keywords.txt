@@ -1,0 +1,38 @@
+austria	austria
+canada	canada
+canadian	canada
+china	china
+chinese	china
+croatia	croatia
+czech republic	czech republic
+czech	czech republic
+estonia	estonia
+estonian	estonia
+finland	finland
+france	france
+french	france
+germany	germany
+german	germany
+italy	italy
+italian	italy
+japan	japan
+japanese	japan
+south korea	south korea
+south korean	south korea
+korea	korea	
+korean	korea
+netherlands	netherlands
+dutch	netherlands
+norway	norway
+poland	poland	
+polish	poland
+russia	russia
+russian	russia
+slovakia	slovakia
+sweden	sweden
+swedish	sweden
+switzerland	switzerland
+swiss	switzerland
+ukraine	ukraine
+usa	usa
+american	usa

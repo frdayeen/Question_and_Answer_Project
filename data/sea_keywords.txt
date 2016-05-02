@@ -1,0 +1,7 @@
+arctic ocean	arctic ocean
+arctic	arctic ocean
+atlantic ocean	atlantic ocean
+atlantic	atlantic ocean
+indian ocean	indian ocean
+pacific ocean	pacific ocean
+pacific	pacific ocean

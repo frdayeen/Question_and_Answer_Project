@@ -1,0 +1,16 @@
+austria	austria
+bahrain	bahrain
+belgium	belgium
+benin	benin
+canada	canada
+france	france
+germany	germany
+italy	italy
+luxembourg	luxembourg
+san marino	san marino
+slovenia	slovenia
+south africa	south africa
+spain	spain
+switzerland	switzerland
+vatican city	vatican city
+vatican	vatican city

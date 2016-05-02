@@ -1,0 +1,23 @@
+biathlon	biathlon
+skijumping	skijumping
+ski jumping	skijumping
+ski-jumping	skijumping
+speedskating	speedskating
+speed skating	speedskating
+speed-skating	speedskating
+shorttrack	shorttrack
+short track	shorttrack
+short-track	shorttrack
+figureskating	figureskating
+figure skating	figureskating
+figure-skating	figureskating
+giantslalom	giantslalom
+giant slalom	giantslalom
+giant-slalom	giantslalom
+crosscountry	crosscountry
+cross country	crosscountry
+cross-country	crosscountry
+slalom	slalom
+superg	super-g
+super g	super-g
+super-g	super-g

@@ -1,0 +1,29 @@
+n t
+M
+
+n s
+M
+
+g s
+M
+
+h s
+M
+
+n y
+M
+
+g y
+S
+
+g s
+S
+
+g t
+S
+
+h y
+S
+
+n t
+S

@@ -1,0 +1,201 @@
+Is Rome the capital of Italy?
+Root  => SQ
+SQ => VBZ NP NP .
+NP => NNP
+NP => NP PP
+NP => DT NN
+NNP => Rome | Italy
+PP => IN NP
+VBZ => is 
+DT => the 
+NN => capital
+IN => of
+. => ?
+
+Is France in Europe?
+ROOT => SQ
+SQ => VBZ NP ADVP NP .
+VBZ => is
+NNP => France | Europe
+ADVP => RB
+RB => in
+NP => NNP
+NNP =>Europe
+. => ?
+
+Is the Pacific deeper than the Atlantic?
+ROOT => SQ
+SQ => VBZ NP NP .
+VBZ => is
+NP => DT NNP
+DT => the
+NNP => Pacific | Atlantic
+NP => NP PP
+NP => JJR
+JJR => deeper
+PP => IN
+IN => than
+NP => DT NNP
+. => ?
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Did Razzoli win the men slalom in 2010?
+ROOT => SQ
+SQ => VBD NP VP .
+NP => NNP
+NNP => Razzoli
+VP => VB
+VB => win
+NP => DT NNS NN
+DT => the
+NNS => men
+NN => slalom
+PP =>IN NP
+IN => in
+NP => CD
+CD => 2010
+. => ?
+
+Did a Korean woman win the gold medal in figure skating?
+ROOT => SQ
+SQ => VBD NP VP .
+VBD => did
+NP => DT JJ NN 
+NP => NN NN
+DT => a | the
+JJ => Korean | gold 
+NN => woman | medal | figure | skating
+VP => VB NP PP
+VB => win
+PP => IN
+IN => in
+. => ?
+
+Did Neeson star in Schindler's List?
+ROOT = > SQ
+SQ => VBD NP VP .
+VBD => did
+NP => NNP POS
+NP => NP NN
+NNP => Neeson
+VP => VB PP
+VB => star
+PP => IN NP
+IN => in
+NN => list
+POS => 's
+. => ?
+
+Did Swank win the oscar in 2000?
+ROOT => SQ
+SQ => VBD NP VP .
+VBD => did
+VB => win
+NP => NNP
+NP => NP PP
+NP => DT NN
+NNP => Swank
+NN => oscar
+VP => VB NP 
+DT => the
+. => ?
+
+Did a French actor win the oscar in 2012?
+ROOT => SQ
+SQ => VBD NP VP .
+NP => DT JJ NN
+NN => oscar
+VP => VB NP
+VB => win
+NP => NP PP
+NP => DT NN
+DT => the | a
+PP => IN NP
+IN => inn
+NP => CD
+CD => 2012
+. => ?
+
+---------------------------------------------------------------------------------------------------------------------------
+Who directed Hugo?
+ROOT => SBARQ
+SBARQ => WHNP SQ  .
+WHNP => WP
+WP => who
+SQ => VP
+VP =>VBD NP
+NP => NNP
+NNP => Hugo
+. => ?
+
+Who won the oscar for best actor in 2005?
+ROOT => SBARQ
+SBARQ => WHNP SQ .
+WHNP => WP
+WP => who
+SQ => VP
+VP => VBD NP PP PP
+VBD => won
+NP => DT NN
+PP => IN NP
+IN => for | in
+NP => JJS NN
+NP => CD
+CD => 2005
+JJS => best
+NN => actor
+. => ?
+
+Who directed the best movie in 2010?
+ROOT => SBARQ
+SBARQ => WHNP SQ .
+WHNP => WP
+WP => who
+SQ => VP
+VP => VBD NP
+VBD => directed
+NN => movie
+NP => NP PP
+NP => DT JJS NN
+DT => the 
+JJS => best
+PP => IN NP
+IN => in
+NP => CD
+CD =>2010
+. => ?
+
+What is the capital of Bahrain?
+ROOT => SBARQ
+SBARQ => WHNP SQ .
+WHNP => WP
+WP => what
+SQ => VBZ NP
+VBZ => is
+NP => NP PP
+NP => DT NN
+PP => IN NP
+NN => captial
+NP => NNP 
+NNP => Bahrain
+IN => of
+DT => the 
+. => ?
+
+Which is the highest mountain in the world?
+ROOT => SBARQ
+SBARQ => WHNP SQ .
+WHNP => WP
+WP => which
+SQ => VBZ NP
+NP => NP PP
+NP => DT JJS NN
+NP => DT NN
+NN => mountain | world
+PP => IN NP
+DT => the 
+IN => in
+JJS => highest
+VBZ => is
+. => ?

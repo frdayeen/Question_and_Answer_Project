@@ -1,0 +1,14 @@
+individual	individual
+nh	nh
+1000	1000
+one thousand	1000
+one-thousand	1000
+500	500
+five hundreds	500
+five-hundred	500
+1500	1500
+one thousand and five hundreds	1500
+fifteen hundreds	1500
+fifteen-hundred	1500
+lh	lh
+sprint	sprint
