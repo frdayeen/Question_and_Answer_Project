@@ -30,16 +30,16 @@ public class ParserWrap {
 		
 		 // annotate proper noun phrase
 		 question = annotateNNP(cat, question);
-		 System.out.println("\n��Annotated question�� :" + question);
+//		 System.out.println("\n��Annotated question�� :" + question);
 		 String sql = SemAttach.questionToSQL(cat, question);
-		 System.out.println("\n��Annotated question SQL��:" + sql);	 
+//		 System.out.println("\n��Annotated question SQL��:" + sql);	 
 		 // de-annotate proper noun phrase
 		 sql = sql.replaceAll("\\^", " "); 
 		 sql = sql.replaceAll("\\@", "''");
 		 
 		 sql = sql.replaceAll("MOVIE-", "");
 		 sql = sql.replaceAll("MOVIEWORKER-", "");
-		 System.out.println("\n��De-Annotated question SQL��:" + sql);
+//		 System.out.println("\n��De-Annotated question SQL��:" + sql);
 
 		 return SQLiteConn.getSQLResult(dbName, sql);
 	}

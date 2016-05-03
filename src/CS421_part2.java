@@ -9,8 +9,10 @@ public class CS421_part2 {
 	MusicKeywords sBuilder = new MusicKeywords();
 	String sqlquery = "";
 	
+	SQLGenerator test;
+	
 	public CS421_part2(){
-		
+		test = new SQLGenerator();
 	}
 	
 	public String answerQuestion(String question) {
@@ -18,7 +20,20 @@ public class CS421_part2 {
 		String results = "";
 		try{
 			String label = classifier.classify(question);
-			if(label.equals("M")){
+			test.setSentence(question);
+			test.sentence();
+			if (test.outputQuery() != null)
+			{
+				sqlquery = test.outputQuery();
+				results = SQLiteConn.getSQLResult(DataBase.getMovieDB(), sqlquery);
+				if(Str.isNumber(results)){
+					Integer res = Integer.parseInt(results);
+					if(res == 0) results= "NO";
+					else if(res > 0)results = "YES";
+				}
+				return results;
+			}
+			if(label.equals("M")){			
 				mBuilder.generateQuestionVector(question);
 				sqlquery = mBuilder.generateSQL();
 				results = SQLiteConn.getSQLResult(DataBase.getMovieDB(), sqlquery);
@@ -50,6 +65,9 @@ public class CS421_part2 {
 		System.out.println("Welcome! This is MiniWatson.");
 		System.out.println("Please ask a question. Type 'q' when finished.");
 		System.out.println();
+		
+		
+		
 		CS421_part2 watson = new CS421_part2();
 		
 		Scanner keyboard = new Scanner(System.in);
@@ -66,7 +84,7 @@ public class CS421_part2 {
 			if (answer.trim().isEmpty())
 				answer = "I don't know.";
 			
-			System.out.println("Ans: " + answer);
+			System.out.println("<Ans:>\n " + answer);
 			
 			question = keyboard.nextLine().trim();
 		}//end of while

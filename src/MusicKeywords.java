@@ -13,44 +13,21 @@ import java.util.TreeMap;
 
 public class MusicKeywords extends KeywordfromParser
 {
-//	String[] gender_keywords = {"male", "female", "woman", "man", "women","men"};
-//	String[] competition_name_keywords = {"biathlon", "skijumping", "ski jumping", "ski-jumping", 
-//			"speedskating", "speed skating", "speed-skating", "shorttrack", "short track", "short-track", 
-//			"figureskating", "figure skating", "figure-skating", "giantslalom", "giant slalom", "giant-slalom",
-//			"crosscountry", "cross country", "cross-country", "slalom", "superg", "super g", "super-g"};
-//	String[] competition_type_keywords = {"competition type", "type", "individual", "nh", 
-//			"1000", "one thousand", "one-thousand", "500", "five hundreds", "five-hundred", 
-//			"1500", "one thousand and five hundreds", "fifteen hundreds", "fifteen-hundred", "lh", "sprint"};
-//	String[] athletes_name_keywords = {"aamodt","ammann","andrea","angerer","arakawa","asada",
-//			"bauer","baverel-robert","bjorndalen","buttle","bystol","cheek","chenal","cleski",
-//			"cohen","davis","dorfmeister","dorin","dorofeyev","efremova","fak","greis","hanevold","hautamaki",
-//			"hedda","hedrick","herbst","ho-suk","hoffmann","hosp","huttary","hyun-soo","jay","jiajun",
-//			"kang-seok","kim","kofler","kostelic","kramer","kuzmina","lambiel","lee","ljokelsoy","lysacek",
-//			"maier","malysz","mancuso","mcivor","meissnitzer","miller","mo","morgenstern","myhrer","neuner","ohno",
-//			"olofsson","ottosson","paerson","parson","plushenko","poutiainen","raich","razzoli","riesch","rochette",
-//			"schild","schlierenzauer","schonfelder","skobrev","slutskaya","svendsen","takahashi","veerpalu","wennemars",
-//			"zurbriggen"};
-//	String[] nationality_keywords = {"austria","canada","canadian","china","chinese",
-//			"croatia","czech republic","czech","estonia","estonian","finland","france","french",
-//			"germany","german","italy","italian","japan","japanese","south korea","south korean",
-//			"korea","korean","netherlands","dutch","norway","poland","polish","russia","russian",
-//			"slovakia","sweden","swedish","switzerland","swiss","ukraine","usa","american"};
-//	String[] medal_keywords = {"gold medal", "gold", "silver medal", "silver", "bronze medal", "bronze", "first place", "second place", "third place"};
-	String[] win = {"get","gets","got", "win","wins", "won"};
+	String[] sing = {"sing","sang","sung", "cover"};
 	ArrayList<String> gender_keywords = new ArrayList<String>();
 	ArrayList<String> competition_name_keywords = new ArrayList<String>();
 	ArrayList<String> competition_type_keywords = new ArrayList<String>();
 	ArrayList<String> athletes_name_keywords = new ArrayList<String>();
 	ArrayList<String> nationality_keywords = new ArrayList<String>();
 	ArrayList<String> medal_keywords = new ArrayList<String>();
-	ArrayList<String> win_keywords = new ArrayList<String>(Arrays.asList(win));
+	ArrayList<String> win_keywords = new ArrayList<String>(Arrays.asList(sing));
 	
 	String table = "athletes outer left join (SELECT * FROM competitions natural join results) as cr on athletes.name = cr.winner ";
-	TreeMap<String,String> gender_keywords_map;
-	TreeMap<String,String> competition_name_keywords_map;
-	TreeMap<String,String> competition_type_keywords_map;
+	TreeMap<String,String> album_keywords_map;
+	TreeMap<String,String> name_keywords_map;
+	TreeMap<String,String> album_type_keywords_map;
 	TreeMap<String,String> nationality_keywords_map;
-	TreeMap<String,String> medal_keywords_map;
+	TreeMap<String,String> artists_keywords_map;
 	final int LENGTH = 8;
 	final int ALTHLETE_NAME = 0;
 	final int COMPETITION_NAME = 1;
@@ -66,17 +43,17 @@ public class MusicKeywords extends KeywordfromParser
 		this.sems = new String[LENGTH];
 		for(int i=0;i<LENGTH;i++)
 			this.sems[i] = null;
-		medal_keywords_map = new TreeMap<String, String>();
-		gender_keywords_map = new TreeMap<String, String>();
-		competition_name_keywords_map = new TreeMap<String, String>();
-		competition_type_keywords_map = new TreeMap<String, String>();
+		artists_keywords_map = new TreeMap<String, String>();
+		album_keywords_map = new TreeMap<String, String>();
+		name_keywords_map = new TreeMap<String, String>();
+		album_type_keywords_map = new TreeMap<String, String>();
 		nationality_keywords_map = new TreeMap<String, String>();
-		load_keywords("data/"+"gender_keywords.txt", gender_keywords, gender_keywords_map);
-		load_keywords("data/"+"competition_name_keywords.txt", competition_name_keywords, competition_name_keywords_map);
-		load_keywords("data/"+"competition_type_keywords.txt", competition_type_keywords, competition_type_keywords_map);
-		load_keywords("data/"+"athletes_name_keywords.txt", athletes_name_keywords, null);
+		load_keywords("data/"+"gender_keywords.txt", gender_keywords, album_keywords_map);
+		load_keywords("data/"+"artists_name_keywords.txt", competition_name_keywords, name_keywords_map);
+		load_keywords("data/"+"album_type_keywords.txt", competition_type_keywords, album_type_keywords_map);
+		load_keywords("data/"+"name_keywords.txt", athletes_name_keywords, null);
 		load_keywords("data/"+"nationality_keywords.txt", nationality_keywords, nationality_keywords_map);
-		load_keywords("data/"+"medal_keywords.txt", medal_keywords, medal_keywords_map);
+		load_keywords("data/"+"track_keywords.txt", medal_keywords, artists_keywords_map);
 		
 	}
 	
@@ -147,7 +124,7 @@ public class MusicKeywords extends KeywordfromParser
 			{
 				tag = true;
 				this.qvector[COMPETITION_NAME] = 1;
-				this.sems[COMPETITION_NAME] = competition_name_keywords_map.get(competition_name);
+				this.sems[COMPETITION_NAME] = name_keywords_map.get(competition_name);
 				break;
 			}
 		}
@@ -183,7 +160,7 @@ public class MusicKeywords extends KeywordfromParser
 			{
 				tag = true;
 				this.qvector[GENDER] = 1;
-				this.sems[GENDER] = gender_keywords_map.get(gender);
+				this.sems[GENDER] = album_keywords_map.get(gender);
 				break;
 			}
 		}
@@ -201,7 +178,7 @@ public class MusicKeywords extends KeywordfromParser
 			{
 				tag = true;
 				this.qvector[COMPETITION_TYPE] = 1;
-				this.sems[COMPETITION_TYPE] = competition_type_keywords_map.get(type);
+				this.sems[COMPETITION_TYPE] = album_type_keywords_map.get(type);
 				break;
 			}
 		}
@@ -219,7 +196,7 @@ public class MusicKeywords extends KeywordfromParser
 			{
 				tag = true;
 				this.qvector[MEDAL] = 1;
-				this.sems[MEDAL] = medal_keywords_map.get(medal);
+				this.sems[MEDAL] = artists_keywords_map.get(medal);
 				break;
 			}
 		}

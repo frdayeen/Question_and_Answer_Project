@@ -103,8 +103,7 @@ public class CategoryClassifier {
 		attributes.add(cls);
 		Instances dataset = new Instances("Training-dataset", attributes, 0);
 		
-		//get permutation
-		int[] temp_array = new int[features.length];
+				int[] temp_array = new int[features.length];
 		for(int i=0;i<temp_array.length;i++)
 			temp_array[i] = i;
 		test_list = new int[(int)Math.ceil(temp_array.length*(1-train_percent))];
@@ -134,7 +133,7 @@ public class CategoryClassifier {
 	private void build_feature()
 	{
 		LinkedList<KeyQuestion> question_list = loadTrainingData();
-		//System.out.println(question_list);
+		
 		voc = get_voc(question_list);
 		features = new double[question_list.size()][voc.size()+1];
 		idf_features = new double[voc.size()];
@@ -164,7 +163,7 @@ public class CategoryClassifier {
 				{
 					int ind = term_index.get(w);
 					int frequency = 0;
-					//get the term frequency
+			
 					for(int j=0;j<words.length;j++)
 					{
 						if(words[j].equals(w))
@@ -269,7 +268,7 @@ public class CategoryClassifier {
 				return "M";
 			}
 			if(keywords_G.contains(tokens[i])) {
-				//System.out.print("��Rule 0: keywords inference��");
+			
 				return "G";
 			}
 		}
@@ -290,7 +289,7 @@ public class CategoryClassifier {
 			}
 		}
 	
-			//get the features;
+			
 			double[] feature = new double[features[0].length];
 			double[] IDF = new double[features[0].length];
 			Iterator<String> it = voc.iterator();
@@ -309,7 +308,7 @@ public class CategoryClassifier {
 				{
 					int ind = term_index.get(t);
 					int frequency = 0;
-					//get the term frequency
+			
 					for(int j=0;j<terms.length;j++)
 					{
 						if(terms[j].equals(t))
